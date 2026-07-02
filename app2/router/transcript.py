@@ -54,7 +54,6 @@ async def upload_audio(meeting_id: int, file: UploadFile = File(...)):
     return {
         "message": "Audio uploaded and processed successfully."
     }
-    
 
 @router.get("/get-transcript/{meeting_id}")
 def get_transcript(meeting_id: int, db: Session = Depends(get_db)):
@@ -69,3 +68,4 @@ def get_transcript(meeting_id: int, db: Session = Depends(get_db)):
         "transcribe":meeting.transcribe,
         "transcript": meeting.transcript 
         }
+# test
