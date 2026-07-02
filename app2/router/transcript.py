@@ -67,7 +67,5 @@ def get_transcript(meeting_id: int, db: Session = Depends(get_db)):
     return {
         "meeting_id": meeting.id,
         "transcribe":meeting.transcribe,
-        "transcript": meeting.transcript
-        
-        
-    }
+        "transcript": meeting.transcript 
+        }
